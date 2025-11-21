@@ -1,0 +1,20 @@
+function c
+    g++-12 $argv[1].cpp -o $argv[1] -std=c++20 -Wall -Wextra -ggdb3 -fsanitize=address,undefined -DDEBUG
+end
+
+function tc
+  g++-12 $argv[1].cpp -o $argv[1] -std=c++20 -Wall -Wextra -O3 -fsanitize=address,undefined
+end
+
+function sc
+    g++-12 $argv[1].cpp -o $argv[1] -std=c++20 -Wall -Wextra -O3 -DLOCAL -g
+end
+
+function dc
+    g++-12 $argv[1].cpp -o $argv[1] -std=c++20 -Wall -Wextra -O3 -DDEBUG
+end
+
+function ct
+    g++-12 $argv[1].cpp -o $argv[1] -std=c++20 -Wall -Wextra -ggdb3 -fsanitize=address,undefined -DDEBUG -pthread
+end
+
